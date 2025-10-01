@@ -1,1 +1,8 @@
-
+<div id="home"></div>
+<script>
+  fetch('/assets/index.md')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('home').innerHTML = marked.parse(data); // if using marked.js
+    });
+</script>
