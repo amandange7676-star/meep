@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Extracted Page">
+	<title>Contact</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+		rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/middle_sections.css">
+	<link rel="stylesheet" href="assets/css/components/header-39.css">
+	<link rel="stylesheet" href="assets/css/components/footer-9.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/plugins.css">
+	<link rel="stylesheet" href="assets/css/custom-Imports.css">
+	<link rel="stylesheet" href="assets/css/resonsive.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+	<style>
+		:root {
+			--site-font: "Quicksand";
+		}
+
+		body,
+		#wrapper,
+		#wrapper * {
+			font-family: var(--site-font) !important;
+		}
+	</style>
+</head>
+
+<body class="theme-1">
+	<div id="wrapper">
+		<div id="header"></div>
+
+		<div id="mainPageContent">
+
+			<section class="section-wrapper contact-8 anim-slide-up fade-in">
+				<div class="container contact-8-container">
+					<div class="row">
+						<div class="col-md-6 col-sm-12 contact-8-left">
+							<p class="contact-8-subtitle">WE'RE HERE TO HELP YOU</p>
+							<h2 class="contact-8-title">
+								<strong>Discuss</strong> Your <br> Solar <br> Energy Needs
+							</h2>
+							<p class="contact-8-text">
+								Looking for reliable and sustainable solar solutions tailored to your requirements?
+								Connect with us today and power your future with clean energy.
+							</p>
+
+							<div class="contact-8-info">
+								<p><i class="bi bi-geo-alt"></i> Sector No. 38, Plot No. LC 1, Metro 9 Business Centre,
+									Office No. 14, Opp. Park Street, Rahatni, Pune – 411017, Maharashtra, India.</p>
+								<p><i class="bi bi-envelope"></i> marriotzelechtromech@gmail.com |
+									mustafa.asct10@gmail.com</p>
+								<p><i class="bi bi-telephone"></i> +91-8928771438 / +91-9673566028</p>
+							</div>
+
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="contact-8-form-box">
+								<form>
+									<input type="text" class="form-control contact-8-input" placeholder="Your Name">
+									<input type="email" class="form-control contact-8-input" placeholder="Your Email">
+									<input type="text" class="form-control contact-8-input" placeholder="Your Mobile">
+
+									<textarea class="form-control contact-8-input" rows="3"
+										placeholder="Type your message"></textarea>
+									<button type="submit" class="btn contact-8-submit">
+										Get a Solution
+									</button>
+								</form>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.495901297998!2d73.77829987393777!3d18.596751966845265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b919d5724099%3A0x61fbe2854c7aa6f7!2smetro%209!5e0!3m2!1sen!2sin!4v1758207298887!5m2!1sen!2sin"
+								width="100%" height="450" style="border:0; display:block;" allowfullscreen=""
+								loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+							</iframe>
+						</div>
+
+					</div>
+
+
+				</div>
+			</section>
+		</div>
+		<div id="footer"></div>
+	</div>
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/init.js"></script>
+	<script src="assets/js/plugins.js"></script>
+	<script src="assets/js/jquery.main.js"></script>
+	<script src="assets/js/gsap.min.js"></script>
+	<script src="assets/js/ScrollTrigger.min.js"></script>
+	<script src="assets/js/Observer.min.js"></script>
+	<script src="assets/js/gsap.effects.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+	<script>
+		var fileName = document.title || "index";
+
+		$(document).ready(function () {
+			loadHeaderFooter("header", "assets/clients/meep/meep/header.html");
+			loadHeaderFooter("footer", "assets/clients/meep/meep/footer.html");
+			setTimeout(setActiveNav, 100);
+		});
+		function setActiveNav() {
+			var current = decodeURIComponent(window.location.pathname.split("/").pop() || "");
+			if (current === "" || current === "home.html") current = "index.html";
+
+			$(".main-navigation li a").removeClass("active");
+
+			$(".main-navigation li a").each(function () {
+				var href = $(this).attr("href") || "";
+				var file = decodeURIComponent(href.split("/").pop().split("?")[0].split("#")[0] || "");
+				if (file.toLowerCase() === current.toLowerCase()) {
+					$(this).addClass("active");
+					return false; // stop loop
+				}
+			});
+		}
+
+		function loadHeaderFooter(id, file) {
+			$("#" + id).load(file, function (response, status, xhr) {
+				if (status === "error") {
+					console.error("Error loading " + file + ":", xhr.status, xhr.statusText);
+					return;
+				}
+
+				$("#" + id).find("a").addClass("edit-site");
+
+				if (id === "header") {
+					if (fileName.toLowerCase() === "index" || fileName.toLowerCase() === "home") {
+						$("#" + id).find(".header-39-pagename").css("display", "none");
+						$("#" + id).find(".header-36-section").css("display", "inline-block");
+					} else {
+						$("#" + id).find(".header-36-section").css("display", "none");
+						$("#" + id).find(".header-39-pagename").css("display", "inline-block");
+						$("#" + id).find(".header-39-pagename .Page_name")
+							.text(fileName.charAt(0).toUpperCase() + fileName.slice(1));
+					}
+				}
+			});
+		}
+	</script>
+	<script src="assets/js/middle-section.js"></script>
+
+</body>
+
+</html>
