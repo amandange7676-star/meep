@@ -13,7 +13,7 @@ content:
   - name: home
     label: Home
     type: file
-    path: index.html
+    path: assets/index.md
     fields:
       - name: title
         label: Title
@@ -125,4 +125,5 @@ components:
         label: Background Image
         type: image
         required: true
+
 
