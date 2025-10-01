@@ -1,13 +1,7 @@
 media:
-  - name: files
-    label: Files
-    input: files
-    output: /files
-    categories:
-      - document
   - name: images
     label: Images
-    input: images
+    input: assets/images
     output: /images
     extensions:
       - png
@@ -131,3 +125,4 @@ components:
         label: Background Image
         type: image
         required: true
+
