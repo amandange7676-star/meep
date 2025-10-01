@@ -1,0 +1,21 @@
+version: 1
+build:
+  # If you're using any static site generators like Jekyll or just plain HTML
+  # If you want to build it manually, you can skip this section.
+  publish: ./assets
+
+pages:
+  - path: "/index.html"
+    title: "Home"
+  - path: "/About Us.html"
+    title: "About Us"
+  - path: "/Contact.html"
+    title: "Contact"
+  - path: "/Our Team.html"
+    title: "Our Team"
+  - path: "/Projects.html"
+    title: "Projects"
+  - path: "/Services.html"
+    title: "Services"
+  - path: "/Testimonial.html"
+    title: "Testimonials"
