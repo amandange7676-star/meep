@@ -1,21 +1,133 @@
-version: 1
-build:
-  # If you're using any static site generators like Jekyll or just plain HTML
-  # If you want to build it manually, you can skip this section.
-  publish: ./assets
+media:
+  - name: files
+    label: Files
+    input: files
+    output: /files
+    categories:
+      - document
+  - name: images
+    label: Images
+    input: images
+    output: /images
+    extensions:
+      - png
+      - jpg
+      - jpeg
+      - gif
 
-pages:
-  - path: "/index.html"
-    title: "Home"
-  - path: "/About Us.html"
-    title: "About Us"
-  - path: "/Contact.html"
-    title: "Contact"
-  - path: "/Our Team.html"
-    title: "Our Team"
-  - path: "/Projects.html"
-    title: "Projects"
-  - path: "/Services.html"
-    title: "Services"
-  - path: "/Testimonial.html"
-    title: "Testimonials"
+content:
+  - name: home
+    label: Home
+    type: file
+    path: index.html
+    fields:
+      - name: title
+        label: Title
+        type: text
+        required: true
+      - name: body
+        label: Body
+        type: rich-text
+        required: true
+
+  - name: about
+    label: About Us
+    type: file
+    path: About Us.html
+    fields:
+      - name: title
+        label: Title
+        type: text
+        required: true
+      - name: body
+        label: Body
+        type: rich-text
+        required: true
+
+  - name: contact
+    label: Contact
+    type: file
+    path: Contact.html
+    fields:
+      - name: title
+        label: Title
+        type: text
+        required: true
+      - name: body
+        label: Body
+        type: rich-text
+        required: true
+
+  - name: team
+    label: Our Team
+    type: file
+    path: Our Team.html
+    fields:
+      - name: title
+        label: Title
+        type: text
+        required: true
+      - name: body
+        label: Body
+        type: rich-text
+        required: true
+
+  - name: projects
+    label: Projects
+    type: file
+    path: Projects.html
+    fields:
+      - name: title
+        label: Title
+        type: text
+        required: true
+      - name: body
+        label: Body
+        type: rich-text
+        required: true
+
+  - name: services
+    label: Services
+    type: file
+    path: Services.html
+    fields:
+      - name: title
+        label: Title
+        type: text
+        required: true
+      - name: body
+        label: Body
+        type: rich-text
+        required: true
+
+  - name: testimonial
+    label: Testimonials
+    type: file
+    path: Testimonial.html
+    fields:
+      - name: title
+        label: Title
+        type: text
+        required: true
+      - name: body
+        label: Body
+        type: rich-text
+        required: true
+
+components:
+  hero:
+    label: Hero Section
+    type: object
+    fields:
+      - name: headline
+        label: Headline
+        type: text
+        required: true
+      - name: subheadline
+        label: Subheadline
+        type: text
+        required: true
+      - name: image
+        label: Background Image
+        type: image
+        required: true
